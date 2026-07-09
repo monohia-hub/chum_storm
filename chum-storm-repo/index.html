@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Chum Storm">
+<meta name="theme-color" content="#8CAE4E">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Chum Storm</title>
+<style>
+  :root{
+    --cream:#FBF3E7; --ink:#241933; --gold:#F2B84B; --herb:#6B8F5A; --cult:#C4432B; --sea:#3d6ea5;
+    --sat:env(safe-area-inset-top,0px); --sab:env(safe-area-inset-bottom,0px);
+    --sal:env(safe-area-inset-left,0px); --sar:env(safe-area-inset-right,0px);
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{
+    margin:0;padding:0;overflow:hidden;background:#8CAE4E;font-family:'Nunito',system-ui,sans-serif;
+    height:100dvh; width:100vw; position:fixed; inset:0;
+    overscroll-behavior:none; -webkit-user-select:none; user-select:none; -webkit-touch-callout:none;
+  }
+  #wrap{position:relative;width:100vw;height:100dvh;}
+  canvas{position:absolute;inset:0;display:block;touch-action:none;}
+
+  #hud{
+    position:absolute;top:0;left:0;right:0;
+    padding:calc(10px + var(--sat)) calc(12px + var(--sar)) 6px calc(12px + var(--sal));
+    display:flex;flex-direction:column;gap:6px;z-index:5;pointer-events:none;
+  }
+  .barrow{display:flex;align-items:center;gap:8px;}
+  .hpwrap{flex:1;height:14px;background:rgba(0,0,0,0.4);border-radius:8px;overflow:hidden;border:2px solid rgba(255,255,255,0.25);}
+  .hpfill{height:100%;background:linear-gradient(90deg,#e05c4a,#f2916f);width:100%;transition:width .15s;}
+  .xpwrap{height:8px;background:rgba(0,0,0,0.35);border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,0.2);}
+  .xpfill{height:100%;background:var(--gold);width:0%;transition:width .15s;}
+  .stat{color:#fff;font-weight:800;font-size:12.5px;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,0.5);}
+  #timer{
+    position:absolute;top:calc(10px + var(--sat));left:50%;transform:translateX(-50%);
+    color:#fff;font-weight:800;font-size:16px;text-shadow:0 2px 3px rgba(0,0,0,0.5);
+    z-index:5;pointer-events:none;font-family:'Courier New',monospace;letter-spacing:1px;
+  }
+
+  #pause-btn{
+    position:absolute;top:calc(10px + var(--sat));right:calc(10px + var(--sar));
+    z-index:6;width:40px;height:40px;border-radius:50%;
+    background:rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.35);
+    color:#fff;font-size:16px;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+  }
+  #pause-btn:active{background:rgba(0,0,0,0.6);}
+
+  .overlay{position:absolute;inset:0;background:rgba(15,10,25,0.88);display:flex;align-items:center;justify-content:center;z-index:20;padding:20px calc(20px + var(--sar)) calc(20px + var(--sab)) calc(20px + var(--sal));}
+  .card{background:var(--cream);border:3px solid var(--ink);border-radius:20px;padding:22px 20px;max-width:340px;width:100%;text-align:center;color:var(--ink);max-height:80dvh;overflow-y:auto;}
+  .card h1{font-size:26px;margin:0 0 6px;color:var(--cult);}
+  .card h2{font-size:19px;margin:0 0 10px;}
+  .card p{font-size:13.5px;font-weight:700;color:#6b5f56;line-height:1.4;margin:0 0 14px;}
+  .bigbtn{
+    display:block;width:100%;padding:15px;margin-top:10px;border:none;border-radius:14px;
+    background:var(--cult);color:#fff;font-weight:800;font-size:16px;cursor:pointer;
+    box-shadow:0 4px 0 rgba(0,0,0,0.25); min-height:48px;
+  }
+  .bigbtn:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,0.25);}
+  .bigbtn.alt{background:var(--herb);}
+  .statrow{display:flex;justify-content:space-around;margin:10px 0 16px;}
+  .statrow div{font-size:13px;font-weight:800;}
+  .statrow span{display:block;font-size:20px;color:var(--gold-dark,#c9922c);}
+
+  #upgrades{display:flex;flex-direction:column;gap:10px;}
+  .upg{
+    background:#fff;border:2px solid #e7dcc9;border-radius:14px;padding:14px;
+    display:flex;align-items:center;gap:12px;cursor:pointer;text-align:left;min-height:56px;
+  }
+
+  .home-card{max-width:380px;}
+  .shelf-head{display:flex;justify-content:space-between;align-items:baseline;margin:6px 2px 8px;}
+  .shelf-head b{font-size:13.5px;}
+  .shelf-head span{font-size:12px;font-weight:800;color:var(--cult);}
+  .cat-shelf{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+    background:linear-gradient(180deg,#f3d7a3,#e9c48a);
+    border:2px solid #c9922c;border-radius:14px;padding:10px 6px;margin-bottom:14px;
+    max-height:220px;overflow-y:auto;
+  }
+  .cat-slot{
+    display:flex;flex-direction:column;align-items:center;gap:2px;
+    background:rgba(255,255,255,0.35);border-radius:10px;padding:4px 2px 6px;
+  }
+  .cat-slot canvas{width:44px;height:44px;animation:bob 2.4s ease-in-out infinite;}
+  .cat-slot .locked-ic{
+    width:44px;height:44px;border-radius:50%;background:rgba(43,35,32,0.18);
+    display:flex;align-items:center;justify-content:center;font-weight:800;color:rgba(43,35,32,0.5);font-size:18px;
+  }
+  .cat-slot span{font-size:9.5px;font-weight:800;color:#4a3a26;text-align:center;line-height:1.1;}
+  .cat-slot.unlocked span{color:#2B2320;}
+  @keyframes bob{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-4px);} }
+
+  #new-cat-banner{
+    position:fixed;top:calc(-120px);left:50%;transform:translate(-50%,0);
+    z-index:15;background:var(--cream);border:3px solid var(--ink);border-radius:16px;
+    padding:10px 16px;display:flex;align-items:center;gap:10px;
+    box-shadow:0 8px 0 rgba(0,0,0,0.2);transition:top .4s cubic-bezier(.2,.9,.3,1.3);
+    max-width:88vw;
+  }
+  #new-cat-banner.show{top:calc(14px + var(--sat));}
+  #new-cat-banner canvas{width:44px;height:44px;flex-shrink:0;}
+  #new-cat-banner b{display:block;font-size:13px;color:var(--cult);}
+  #new-cat-banner span{display:block;font-size:11.5px;font-weight:700;color:#4a3a26;}
+  .upg:active{transform:scale(0.98);}
+  .upg .ic{font-size:26px;}
+  .upg b{display:block;font-size:14px;}
+  .upg .stacklv{
+    display:inline-block;background:var(--gold);color:#4a3a1a;font-size:10px;font-weight:800;
+    padding:1px 6px;border-radius:8px;margin-left:5px;vertical-align:middle;
+  }
+  .upg span{display:block;font-size:11.5px;color:#6b5f56;font-weight:700;}
+
+  #joyhint{position:absolute;bottom:calc(16px + var(--sab));left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.55);font-size:12px;font-weight:700;z-index:4;pointer-events:none;}
+
+  #loading-screen{
+    position:fixed;inset:0;z-index:200;
+    background:linear-gradient(180deg,#96BE58,#6f9138);
+    display:flex;align-items:center;justify-content:center;
+    padding:24px calc(24px + var(--sar)) calc(24px + var(--sab)) calc(24px + var(--sal));
+    transition:opacity .45s ease;
+  }
+  #loading-screen.done{ opacity:0; pointer-events:none; }
+  .load-inner{ text-align:center; max-width:320px; width:100%; }
+  .load-inner h1{
+    font-size:30px;color:#fff;margin:0 0 10px;
+    text-shadow:0 3px 0 rgba(0,0,0,0.22);
+    animation:loadbob 1.6s ease-in-out infinite;
+  }
+  @keyframes loadbob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-5px); } }
+  .load-inner .tagline{
+    color:rgba(255,255,255,0.95);font-weight:700;font-size:13px;line-height:1.45;
+    margin:0 0 24px;font-style:italic;text-shadow:0 1px 2px rgba(0,0,0,0.25);
+  }
+  .loadbar-wrap{
+    height:16px;background:rgba(0,0,0,0.28);border:2px solid rgba(255,255,255,0.55);
+    border-radius:10px;overflow:hidden;
+  }
+  .loadbar-fill{ height:100%;width:0%;background:linear-gradient(90deg,#F2B84B,#ffd27a);transition:width .25s ease; }
+  .load-pct{ margin-top:8px;color:#fff;font-weight:800;font-size:12px;text-shadow:0 1px 2px rgba(0,0,0,0.3); }
+
+  #rotate-overlay{
+    position:fixed;inset:0;background:#1b1230;z-index:100;
+    display:none;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:24px;
+  }
+  #rotate-overlay .spin{font-size:44px;margin-bottom:10px;animation:spin 1.8s ease-in-out infinite;}
+  @keyframes spin{ 0%,100%{transform:rotate(0deg);} 50%{transform:rotate(90deg);} }
+  @media (orientation:landscape) and (max-height:600px){
+    #rotate-overlay{display:flex;}
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c"></canvas>
+
+  <div id="loading-screen">
+    <div class="load-inner">
+      <h1>🐟 Chum Storm</h1>
+      <p class="tagline">The stray cats have found your address, and they are not leaving until they've had dinner.</p>
+      <div class="loadbar-wrap"><div class="loadbar-fill" id="loading-bar-fill"></div></div>
+      <div class="load-pct" id="loading-pct">0%</div>
+    </div>
+  </div>
+  <div id="timer">00:00</div>
+  <div id="hud">
+    <div class="barrow">
+      <div class="stat" id="lvl-label">Lv.1</div>
+      <div class="hpwrap"><div class="hpfill" id="hpfill"></div></div>
+      <div class="stat" id="fed-label">🐟 0</div>
+    </div>
+    <div class="xpwrap"><div class="xpfill" id="xpfill"></div></div>
+  </div>
+  <button id="pause-btn" aria-label="Pause">⏸</button>
+  <div id="joyhint">hold &amp; drag anywhere to move</div>
+
+  <div class="overlay" id="menu">
+    <div class="card home-card">
+      <h1>🐟 Chum Storm</h1>
+      <p>Cats keep showing up. They're not going to fight you — they're going to <b>demand dinner</b>. Auto-toss fish, keep the horde fed and happy, and every new type you feed moves in here for good.</p>
+      <div class="shelf-head">
+        <b>Your Cat Home</b>
+        <span id="collection-count">0 / 7</span>
+      </div>
+      <div id="cat-shelf" class="cat-shelf"></div>
+      <button class="bigbtn" id="btn-start">Start Feeding</button>
+    </div>
+  </div>
+
+  <div id="new-cat-banner"></div>
+
+  <div class="overlay" id="pauseOverlay" style="display:none;">
+    <div class="card">
+      <h2>Paused</h2>
+      <button class="bigbtn" id="btn-resume">Resume</button>
+      <button class="bigbtn alt" id="btn-quit">Quit to Menu</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="levelup" style="display:none;">
+    <div class="card">
+      <h2>Level Up! 🎉</h2>
+      <div id="upgrades"></div>
+    </div>
+  </div>
+
+  <div class="overlay" id="dayOverlay" style="display:none;">
+    <div class="card">
+      <h1>🌙 Day <span id="day-complete-num">1</span> Survived!</h1>
+      <p>The horde heads home to sleep it off... but they'll be back tomorrow,
+      and they're bringing more mouths to feed.</p>
+      <div class="statrow">
+        <div>Next up<span id="day-next-num">2</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="gameover" style="display:none;">
+    <div class="card">
+      <h1 id="go-title">Overrun!</h1>
+      <div class="statrow">
+        <div>Reached<span id="go-time">Day 1</span></div>
+        <div>Cats Fed<span id="go-fed">0</span></div>
+        <div>Level<span id="go-lvl">1</span></div>
+      </div>
+      <button class="bigbtn" id="btn-retry">Try Again</button>
+      <button class="bigbtn alt" id="btn-gohome">🏠 Visit Cat Home</button>
+    </div>
+  </div>
+</div>
+<div id="rotate-overlay"><div class="spin">🔄</div><div>Rotate your device to portrait<br>to keep feeding the horde</div></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============== CANVAS SETUP ============== */
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let W,H;
+function resize(){ W = canvas.width = innerWidth; H = canvas.height = innerHeight; }
+resize(); addEventListener('resize', resize);
+
+/* ============== PIXEL-ART FLOOR (procedural, tiled) ============== */
+const FLOOR_PX = 4;      // chunky pixel block size
+const FLOOR_CELLS = 26;  // tile is FLOOR_CELLS x FLOOR_CELLS blocks
+const FLOOR_TILE = FLOOR_CELLS*FLOOR_PX;
+function buildFloorTile(){
+  const off = document.createElement('canvas');
+  off.width = FLOOR_TILE; off.height = FLOOR_TILE;
+  const o = off.getContext('2d');
+  o.imageSmoothingEnabled = false;
+  // flat warm green, no texture
+  o.fillStyle = '#8CAE4E';
+  o.fillRect(0,0,FLOOR_TILE,FLOOR_TILE);
+  return off;
+}
+const floorPattern = ctx.createPattern(buildFloorTile(), 'repeat');
+
+/* ============== INPUT ============== */
+let pointerActive = false, pointerX = 0, pointerY = 0;
+function setPointer(e){
+  const t = e.touches ? e.touches[0] : e;
+  pointerX = t.clientX; pointerY = t.clientY;
+}
+canvas.addEventListener('touchstart', e=>{ pointerActive=true; setPointer(e); e.preventDefault(); }, {passive:false});
+canvas.addEventListener('touchmove', e=>{ setPointer(e); e.preventDefault(); }, {passive:false});
+canvas.addEventListener('touchend', e=>{ pointerActive=false; }, {passive:false});
+canvas.addEventListener('mousedown', e=>{ pointerActive=true; setPointer(e); });
+addEventListener('mousemove', e=>{ if(pointerActive) setPointer(e); });
+addEventListener('mouseup', ()=> pointerActive=false);
+
+/* ============== GAME STATE ============== */
+let state = 'menu'; // menu | playing | levelup | gameover
+let player, fish, cats, orbs, particles;
+let grassPatches = [];
+let elapsed = 0, fedCount = 0, spawnTimer = 0, lastT = 0;
+let dayNumber = 1, dayElapsed = 0, bossSpawnedThisDay = false;
+const DAY_LENGTH = 45;
+let shakeT = 0;
+
+const grassImg = new Image();
+grassImg.src = 'assets/fx/grass.png';
+
+/* Cheap value-noise (bilinear-interpolated random grid, smoothstepped) used
+   only to decide WHERE grass clusters — gives patchy clumps instead of an
+   even scatter, without needing a real Perlin/Simplex implementation. */
+function buildNoiseSampler(gw, gh){
+  const grid = [];
+  for(let y=0; y<=gh; y++){
+    const row=[];
+    for(let x=0; x<=gw; x++) row.push(Math.random());
+    grid.push(row);
+  }
+  return function sample(u, v){ // u,v in [0,1]
+    const nx = u*gw, ny = v*gh;
+    const x0 = Math.min(gw-1, Math.floor(nx)), y0 = Math.min(gh-1, Math.floor(ny));
+    const tx = nx-x0, ty = ny-y0;
+    const sx = tx*tx*(3-2*tx), sy = ty*ty*(3-2*ty);
+    const v00=grid[y0][x0], v10=grid[y0][x0+1], v01=grid[y0+1][x0], v11=grid[y0+1][x0+1];
+    const a = v00+(v10-v00)*sx, b = v01+(v11-v01)*sx;
+    return a+(b-a)*sy;
+  };
+}
+function generateGrassPatches(){
+  grassPatches = [];
+  const noise = buildNoiseSampler(6, 10);
+  const spacing = 44;
+  for(let py=36; py<H-36; py+=spacing){
+    for(let px=36; px<W-36; px+=spacing){
+      const jx = px + (Math.random()-0.5)*spacing*0.75;
+      const jy = py + (Math.random()-0.5)*spacing*0.75;
+      const n = noise(jx/W, jy/H);
+      if(n > 0.55){
+        grassPatches.push({
+          x: jx, y: jy, r: 19,
+          sway:{x:0,y:0}, phase: Math.random()*Math.PI*2,
+          scale: 0.82 + Math.random()*0.4,
+        });
+      }
+    }
+  }
+}
+
+function resetGame(){
+  player = {
+    x: W/2, y: H/2, r: 20, hp: 100, maxHp: 100,
+    speed: 265, fireCooldown: 0.55, fireTimer: 0,
+    fishDamage: 9, fishSpeed: 480, fishCount: 1, pierce: 1,
+    spread: 14, magnet: 70, xp: 0, level: 1, xpToNext: 8,
+    invuln: 0, facing: 0, dir:'down', walkT:0, moving:false,
+    knock:{x:0,y:0}, hitBounce:0, upgradeCounts:{}, regen:0,
+    catnipCooldown: 1.6, catnipTimer: 0.8, catnipRange: 105, catnipAngle: 0.58, catnipDamage: 12,
+  };
+  fish = []; cats = []; orbs = []; particles = [];
+  generateGrassPatches();
+  elapsed = 0; fedCount = 0; spawnTimer = 0.6; lastT = performance.now();
+  dayNumber = 1; dayElapsed = 0; bossSpawnedThisDay = false;
+  updateHud();
+}
+
+/* ============== CAT TYPES (progressively more absurd) ============== */
+const CAT_TYPES = [
+  { key:'kitten', unlockDay:1, hp:16, speed:70,  dmg:7,  r:20, xp:3,  fur:'#e79a4e' },
+  { key:'shades', unlockDay:2, hp:26, speed:78,  dmg:8,  r:22, xp:5,  fur:'#3a3a3a' },
+  { key:'astro',  unlockDay:3, hp:40, speed:66,  dmg:9,  r:24, xp:7,  fur:'#e9e4de' },
+  { key:'wizard', unlockDay:4, hp:55, speed:60,  dmg:10, r:24, xp:9,  fur:'#8a5aa8' },
+  { key:'roomba', unlockDay:5, hp:70, speed:95,  dmg:9,  r:23, xp:10, fur:'#c98a54' },
+  { key:'hydra',  unlockDay:6, hp:95, speed:55,  dmg:13, r:28, xp:14, fur:'#5a7a52' },
+];
+const BOSS_TYPE = { key:'catzilla', hp:900, speed:38, dmg:22, r:52, xp:80, fur:'#a1382a' };
+const ALL_CAT_DEFS = [...CAT_TYPES, BOSS_TYPE];
+const CAT_NAMES = {
+  kitten:'Kitten', shades:'Cool Cat', astro:'Astro Cat', wizard:'Wizard Cat',
+  roomba:'Roomba Cat', hydra:'Hydra Cat', catzilla:'Catzilla',
+};
+
+/* Real pixel-art sprites (from the user's own reference set) mapped to each type.
+   Hydra gets three different breeds for a properly absurd multi-headed look. */
+const CAT_SPRITES = {
+  kitten:  'assets/cats/cat04.png',
+  shades:  'assets/cats/cat05.png',
+  astro:   'assets/cats/cat01.png',
+  wizard:  'assets/cats/cat03.png',
+  roomba:  'assets/cats/cat02.png',
+  hydra:   ['assets/cats/cat01.png','assets/cats/cat04.png','assets/cats/cat06.png'],
+  catzilla:'assets/cats/cat06.png',
+};
+const catImages = {};
+(function preloadCatSprites(){
+  const paths = new Set();
+  Object.values(CAT_SPRITES).forEach(v=>{
+    if(Array.isArray(v)) v.forEach(p=>paths.add(p)); else paths.add(v);
+  });
+  paths.forEach(p=>{ const img = new Image(); img.src = p; catImages[p] = img; });
+})();
+
+/* Player directional walk-cycle sprites (from the user's own reference sheet) */
+const PLAYER_SPRITES = {
+  up:    ['assets/player/up1.png','assets/player/up2.png','assets/player/up3.png'],
+  down:  ['assets/player/down1.png','assets/player/down2.png','assets/player/down3.png'],
+  left:  ['assets/player/left.png'],
+  right: ['assets/player/right.png'],
+};
+const playerImages = {};
+Object.values(PLAYER_SPRITES).forEach(arr=>arr.forEach(p=>{
+  const img = new Image(); img.src = p; playerImages[p] = img;
+}));
+
+/* ============== COLLECTION (persists across sessions) ============== */
+const COLLECTION_KEY = 'chumstorm_collection_v1';
+let collected = new Set();
+try{ collected = new Set(JSON.parse(localStorage.getItem(COLLECTION_KEY)||'[]')); }catch(e){}
+function saveCollection(){
+  try{ localStorage.setItem(COLLECTION_KEY, JSON.stringify([...collected])); }catch(e){}
+}
+
+let newCatQueue = [];
+let newCatShowing = false;
+function queueNewCat(def){
+  newCatQueue.push(def);
+  if(!newCatShowing) showNextNewCat();
+}
+function showNextNewCat(){
+  if(!newCatQueue.length){ newCatShowing=false; return; }
+  newCatShowing = true;
+  const def = newCatQueue.shift();
+  const banner = document.getElementById('new-cat-banner');
+  banner.innerHTML = `<canvas width="60" height="60"></canvas><div><b>New Friend!</b><span>${CAT_NAMES[def.key]} moved into your home</span></div>`;
+  const mini = banner.querySelector('canvas').getContext('2d');
+  mini.translate(30,40); mini.scale(0.9,0.9);
+  drawCatShape(mini, def);
+  banner.classList.add('show');
+  vibrate([15,40,15,40,15]);
+  setTimeout(()=>{
+    banner.classList.remove('show');
+    setTimeout(showNextNewCat, 350);
+  }, 2200);
+}
+
+function renderCollection(){
+  const shelf = document.getElementById('cat-shelf');
+  shelf.innerHTML = '';
+  ALL_CAT_DEFS.forEach((def,i)=>{
+    const has = collected.has(def.key);
+    const slot = document.createElement('div');
+    slot.className = 'cat-slot'+(has?' unlocked':'');
+    if(has){
+      slot.innerHTML = `<canvas width="60" height="60" style="animation-delay:${-(i*0.37)}s"></canvas><span>${CAT_NAMES[def.key]}</span>`;
+      const cx = slot.querySelector('canvas').getContext('2d');
+      cx.translate(30,40); cx.scale(0.9,0.9);
+      drawCatShape(cx, def);
+    } else {
+      slot.innerHTML = `<div class="locked-ic">?</div><span>???</span>`;
+    }
+    shelf.appendChild(slot);
+  });
+  document.getElementById('collection-count').textContent = collected.size+' / '+ALL_CAT_DEFS.length;
+}
+
+function tierPool(day){ return CAT_TYPES.filter(c=>c.unlockDay<=day); }
+
+function spawnCat(isBoss){
+  const ang = Math.random()*Math.PI*2;
+  const dist = Math.max(W,H)*0.62;
+  const x = player.x + Math.cos(ang)*dist, y = player.y + Math.sin(ang)*dist;
+  const pool = tierPool(dayNumber);
+  const def = isBoss ? BOSS_TYPE : pool[Math.floor(Math.random()*pool.length)];
+  // the horde comes back stronger every day it returns for dinner
+  const scale = 1 + Math.min(2.4, (dayNumber-1)*0.35);
+  cats.push({
+    x, y, def, r: def.r,
+    hp: def.hp*scale, maxHp: def.hp*scale,
+    speed: def.speed, dmg: def.dmg*Math.min(1.8, scale),
+    contactCd:0, wob: Math.random()*Math.PI*2, isBoss,
+    knock:{x:0,y:0}, hitBounce:0, dying:false, dyingT:0,
+  });
+}
+
+/* ============== UPGRADES ============== */
+const UPGRADE_POOL = [
+  { key:'bait',    ic:'🐠', name:'Bigger Bait',  desc:'+30% fish damage',       maxStacks:6, apply:p=>p.fishDamage*=1.30 },
+  { key:'cast',    ic:'⚡', name:'Quick Cast',   desc:'-12% cast cooldown',     maxStacks:5, apply:p=>p.fireCooldown=Math.max(0.10,p.fireCooldown*0.88) },
+  { key:'riptide', ic:'🌊', name:'Riptide',      desc:'+15% extra fish speed',  maxStacks:5, apply:p=>p.fishSpeed*=1.15 },
+  { key:'boots',   ic:'🥾', name:'Sturdy Boots', desc:'+18 max HP, full heal',  maxStacks:6, apply:p=>{p.maxHp+=18; p.hp=p.maxHp;} },
+  { key:'feet',    ic:'👟', name:'Fast Feet',    desc:'+9% move speed',         maxStacks:6, apply:p=>p.speed*=1.09 },
+  { key:'tackle',  ic:'🧰', name:'Tackle Box',   desc:'fish pierce +1 cat',     maxStacks:4, apply:p=>p.pierce+=1 },
+  { key:'magnet',  ic:'🧲', name:'Chum Magnet',  desc:'+30% pickup radius',     maxStacks:4, apply:p=>p.magnet*=1.30 },
+  { key:'regen',   ic:'💚', name:'Fresh Catch',  desc:'+1 HP regen per second', maxStacks:5, apply:p=>p.regen=(p.regen||0)+1 },
+];
+function rollUpgrades(available){
+  const pool = [...available];
+  const picks = [];
+  for(let i=0;i<3 && pool.length;i++){
+    const idx = Math.floor(Math.random()*pool.length);
+    picks.push(pool.splice(idx,1)[0]);
+  }
+  return picks;
+}
+function showLevelUp(){
+  const available = UPGRADE_POOL.filter(u => (player.upgradeCounts[u.key]||0) < u.maxStacks);
+  if(!available.length){
+    // fully stacked out — just top up a little and keep the run flowing
+    player.hp = Math.min(player.maxHp, player.hp + player.maxHp*0.15);
+    state='playing'; lastT=performance.now(); requestAnimationFrame(loop);
+    return;
+  }
+  state = 'levelup';
+  const list = document.getElementById('upgrades');
+  list.innerHTML='';
+  rollUpgrades(available).forEach(u=>{
+    const count = player.upgradeCounts[u.key]||0;
+    const div = document.createElement('div');
+    div.className='upg';
+    div.innerHTML = `<div class="ic">${u.ic}</div><div><b>${u.name}${count>0?' <span class="stacklv">Lv '+(count+1)+'</span>':''}</b><span>${u.desc}</span></div>`;
+    div.onclick = ()=>{
+      u.apply(player);
+      player.upgradeCounts[u.key] = count+1;
+      document.getElementById('levelup').style.display='none';
+      state='playing'; lastT=performance.now(); requestAnimationFrame(loop);
+    };
+    list.appendChild(div);
+  });
+  document.getElementById('levelup').style.display='flex';
+}
+
+/* ============== FISH / COMBAT ============== */
+function throwFish(targetAng){
+  const n = player.fishCount;
+  // Fish are spread evenly around the full circle, anchored to the aim
+  // direction. Every extra fish (gained on level-up) automatically lands in
+  // a gap no other fish currently occupies, instead of clustering together.
+  for(let i=0;i<n;i++){
+    const a = targetAng + (i/n)*Math.PI*2 + (Math.random()-0.5)*0.04;
+    fish.push({
+      x: player.x, y: player.y,
+      vx: Math.cos(a)*player.fishSpeed, vy: Math.sin(a)*player.fishSpeed,
+      r: 7, dmg: player.fishDamage, pierce: player.pierce, life: 1.4,
+    });
+  }
+}
+
+/* Catnip Spray — secondary weapon. Short range, wide conal AOE, no aiming
+   skill needed beyond facing the right way: everything caught in the cone
+   in front of the player takes damage at once. */
+function sprayCatnip(aimAngle){
+  const range = player.catnipRange, half = player.catnipAngle;
+  for(const c of cats){
+    if(c.dying) continue;
+    const dx=c.x-player.x, dy=c.y-player.y, d=Math.hypot(dx,dy);
+    if(d > range+c.r) continue;
+    let da = Math.atan2(dy,dx) - aimAngle;
+    while(da > Math.PI) da -= Math.PI*2;
+    while(da < -Math.PI) da += Math.PI*2;
+    if(Math.abs(da) <= half){
+      hitCat(c, player.catnipDamage, Math.atan2(dy,dx));
+    }
+  }
+  // green spray-cone flash + drifting catnip puffs
+  particles.push({type:'cone', x:player.x, y:player.y, angle:aimAngle, range, half, life:0.22});
+  for(let i=0;i<11;i++){
+    const a = aimAngle + (Math.random()-0.5)*half*2;
+    const dist = range*(0.25+Math.random()*0.7);
+    particles.push({
+      x: player.x+Math.cos(a)*dist*0.15, y: player.y+Math.sin(a)*dist*0.15,
+      vx: Math.cos(a)*(70+Math.random()*90), vy: Math.sin(a)*(70+Math.random()*90),
+      life: 0.4+Math.random()*0.25, type:'catnip',
+    });
+  }
+  vibrate(14);
+}
+
+function nearestCatAngle(){
+  let best=null, bd=Infinity;
+  for(const c of cats){
+    const dx=c.x-player.x, dy=c.y-player.y, d=dx*dx+dy*dy;
+    if(d<bd){bd=d; best=c;}
+  }
+  if(!best) return player.facing;
+  player.facing = Math.atan2(best.y-player.y, best.x-player.x);
+  return player.facing;
+}
+/* Aiming is driven directly by the live pointer position every time we fire —
+   no smoothing, no lag — so throws track the cursor/finger instantly.
+   Only falls back to auto-aiming the nearest cat when there's no active
+   pointer (e.g. mid-frame edge cases) so the player isn't ever defenseless. */
+function computeAimAngle(){
+  if(pointerActive){
+    const dx = pointerX - player.x, dy = pointerY - player.y;
+    if(Math.hypot(dx,dy) > 2){
+      player.facing = Math.atan2(dy,dx);
+      return player.facing;
+    }
+  }
+  return nearestCatAngle();
+}
+
+/* Shared hit-reaction: damage, squash-bounce, knockback, and death/feed
+   handling — used by fish impacts and the catnip spray alike so every
+   weapon type produces the same punchy reaction. */
+function hitCat(c, dmg, knockAngle){
+  if(c.dying) return;
+  c.hp -= dmg;
+  c.hitBounce = 1;
+  c.knock.x += Math.cos(knockAngle)*150;
+  c.knock.y += Math.sin(knockAngle)*150;
+  if(c.hp<=0){
+    c.hp = 0;
+    c.dying = true; c.dyingT = 0.32;
+    c.knock.x += Math.cos(knockAngle)*75;
+    c.knock.y += Math.sin(knockAngle)*75;
+    feedCat(c);
+    spawnPoof(c.x,c.y,c.def.fur);
+  }
+}
+
+function feedCat(c){
+  fedCount++;
+  orbs.push({
+    x:c.x, y:c.y, groundY:c.y, value:c.def.xp*2, // doubled: level up twice as fast
+    vx:(Math.random()-0.5)*110, vy:-170-Math.random()*50,
+    bounces:0, settled:false,
+  });
+  spawnLoveBurst(c.x,c.y);
+  vibrate(18);
+  if(!collected.has(c.def.key)){
+    collected.add(c.def.key);
+    saveCollection();
+    queueNewCat(c.def);
+  }
+}
+function spawnHeart(x,y){
+  particles.push({x,y,vy:-40,life:0.6,type:'heart'});
+}
+function spawnLoveBurst(x,y){
+  const n = 12;
+  for(let i=0;i<n;i++){
+    const a = (i/n)*Math.PI*2 + Math.random()*0.3;
+    const sp = 95+Math.random()*75;
+    particles.push({x,y,vx:Math.cos(a)*sp, vy:Math.sin(a)*sp-40, life:0.6+Math.random()*0.25, type:'heart2', sz:16+Math.random()*10});
+  }
+  particles.push({x,y,life:0.45,type:'ring',r:9});
+  particles.push({x,y,life:0.22,type:'flash',r:4});
+}
+function spawnPoof(x,y,color){
+  for(let i=0;i<6;i++){
+    const a = Math.random()*Math.PI*2, sp = 40+Math.random()*60;
+    particles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:0.35,type:'poof',color});
+  }
+}
+
+/* ============== UPDATE ============== */
+function update(dt){
+  elapsed += dt;
+  dayElapsed += dt;
+  if(dayElapsed >= DAY_LENGTH){ triggerDayTransition(); return; }
+
+  // player movement toward pointer
+  player.moving = false;
+  if(pointerActive){
+    const dx = pointerX - player.x, dy = pointerY - player.y;
+    const d = Math.hypot(dx,dy);
+    if(d>4){
+      const vx = dx/d*player.speed, vy = dy/d*player.speed;
+      player.x += vx*dt; player.y += vy*dt;
+      player.facing = Math.atan2(dy,dx);
+      player.dir = Math.abs(dx)>Math.abs(dy) ? (dx>0?'right':'left') : (dy>0?'down':'up');
+      player.moving = true;
+      player.walkT = (player.walkT||0) + dt;
+    }
+  }
+  // knockback from getting hit decays back to zero, layered on top of normal movement
+  player.knock.x -= player.knock.x*8.5*dt;
+  player.knock.y -= player.knock.y*8.5*dt;
+  player.x += player.knock.x*dt;
+  player.y += player.knock.y*dt;
+  if(player.hitBounce>0) player.hitBounce = Math.max(0, player.hitBounce - dt*5.5);
+
+  player.x = Math.max(24,Math.min(W-24,player.x));
+  player.y = Math.max(24,Math.min(H-24,player.y));
+  if(player.invuln>0) player.invuln -= dt;
+  if(player.regen>0) player.hp = Math.min(player.maxHp, player.hp + player.regen*dt);
+
+  // grass — only the player disturbs it, cats/fish pass through unaffected
+  for(const g of grassPatches){
+    const dx = g.x-player.x, dy = g.y-player.y, d = Math.hypot(dx,dy)||1;
+    const totalR = g.r+18;
+    if(d < totalR){
+      const push = (1-d/totalR);
+      const tx = (dx/d)*push*40, ty = (dy/d)*push*40;
+      g.sway.x += (tx-g.sway.x)*Math.min(1,dt*14);
+      g.sway.y += (ty-g.sway.y)*Math.min(1,dt*14);
+    } else {
+      g.sway.x -= g.sway.x*7*dt;
+      g.sway.y -= g.sway.y*7*dt;
+    }
+  }
+
+  // spawning — the horde gets denser and faster every day it comes back
+  spawnTimer -= dt;
+  const spawnRate = Math.max(0.22, 1.3 - dayNumber*0.09);
+  const maxConcurrent = Math.min(14, 2+dayNumber);
+  if(spawnTimer<=0 && cats.length < maxConcurrent){ spawnCat(false); spawnTimer = spawnRate; }
+  // one boss visit per day, starting day 2, roughly two-thirds through the day
+  if(!bossSpawnedThisDay && dayNumber>=2 && dayElapsed > DAY_LENGTH*0.62){
+    spawnCat(true);
+    bossSpawnedThisDay = true;
+  }
+
+  // fire
+  player.fireTimer -= dt;
+  if(player.fireTimer<=0 && cats.length){
+    player.fireTimer = player.fireCooldown;
+    throwFish(computeAimAngle());
+  }
+
+  player.catnipTimer -= dt;
+  if(player.catnipTimer<=0 && cats.length){
+    player.catnipTimer = player.catnipCooldown;
+    sprayCatnip(computeAimAngle());
+  }
+
+  // fish update
+  for(let i=fish.length-1;i>=0;i--){
+    const f = fish[i];
+    f.x += f.vx*dt; f.y += f.vy*dt; f.life -= dt;
+    if(f.life<=0 || f.x<-40||f.x>W+40||f.y<-40||f.y>H+40){ fish.splice(i,1); continue; }
+  }
+
+  // cats update
+  for(let i=cats.length-1;i>=0;i--){
+    const c = cats[i];
+    if(c.hitBounce>0) c.hitBounce = Math.max(0, c.hitBounce - dt*5.5);
+
+    if(c.dying){
+      c.dyingT -= dt;
+      c.knock.x -= c.knock.x*8.5*dt; c.knock.y -= c.knock.y*8.5*dt;
+      c.x += c.knock.x*dt; c.y += c.knock.y*dt;
+      if(c.dyingT<=0) cats.splice(i,1);
+      continue;
+    }
+
+    c.wob += dt*6;
+    const dx = player.x-c.x, dy = player.y-c.y, d = Math.hypot(dx,dy)||1;
+    const wobble = c.def.key==='roomba' ? Math.sin(c.wob)*30 : 0;
+    c.knock.x -= c.knock.x*8.5*dt; c.knock.y -= c.knock.y*8.5*dt;
+    c.x += (dx/d*c.speed + -dy/d*wobble*0.02)*dt + c.knock.x*dt;
+    c.y += (dy/d*c.speed + dx/d*wobble*0.02)*dt + c.knock.y*dt;
+
+    // contact w/ player
+    c.contactCd -= dt;
+    if(d < c.r+player.r-6 && c.contactCd<=0 && player.invuln<=0){
+      player.hp -= c.dmg;
+      player.invuln = 0.5;
+      c.contactCd = 0.6;
+      shakeT = 0.15;
+      vibrate(30);
+      player.hitBounce = 1;
+      const kAng = Math.atan2(player.y-c.y, player.x-c.x);
+      player.knock.x += Math.cos(kAng)*190;
+      player.knock.y += Math.sin(kAng)*190;
+      if(player.hp<=0){ player.hp=0; endGame(false); return; }
+    }
+
+    // fish hits
+    for(let j=fish.length-1;j>=0;j--){
+      const f = fish[j];
+      if(Math.hypot(f.x-c.x,f.y-c.y) < c.r+f.r){
+        spawnPoof(f.x,f.y,'#cfe3ff');
+        hitCat(c, f.dmg, Math.atan2(f.vy,f.vx));
+        f.pierce--;
+        if(f.pierce<=0) fish.splice(j,1);
+        break;
+      }
+    }
+  }
+
+  // orbs
+  for(let i=orbs.length-1;i>=0;i--){
+    const o = orbs[i];
+    if(!o.settled){
+      o.vy += 520*dt; // gravity
+      o.x += o.vx*dt; o.y += o.vy*dt;
+      if(o.y >= o.groundY){
+        o.y = o.groundY;
+        o.vy *= -0.42; // damped bounce
+        o.vx *= 0.55;
+        o.bounces++;
+        if(o.bounces>=2 || Math.abs(o.vy)<50){ o.settled=true; o.vx=0; o.vy=0; o.y=o.groundY; }
+      }
+    }
+    const dx=player.x-o.x, dy=player.y-o.y, d=Math.hypot(dx,dy);
+    if(d < player.magnet){
+      o.x += dx/d*260*dt; o.y += dy/d*260*dt;
+    }
+    if(d < 22){
+      player.xp += o.value;
+      orbs.splice(i,1);
+      if(player.xp >= player.xpToNext){
+        player.xp -= player.xpToNext;
+        player.level++;
+        // progressively steeper: each level takes noticeably longer than the last
+        player.xpToNext = Math.round(player.xpToNext*1.22+5);
+        if(player.level % 5 === 0) player.fishCount += 1; // a new throw direction only every 5 levels
+        player.fishSpeed *= 1.06;       // bullets get progressively faster every level
+        vibrate([20,30,20]);
+        showLevelUp();
+      }
+    }
+  }
+
+  // particles
+  for(let i=particles.length-1;i>=0;i--){
+    const p = particles[i];
+    p.life -= dt;
+    if(p.type==='heart') p.y += p.vy*dt;
+    else if(p.type==='heart2'){ p.vy += 90*dt; p.x += p.vx*dt; p.y += p.vy*dt; p.vx *= (1-2*dt); }
+    else if(p.type==='ring'){ p.r += dt*190; }
+    else if(p.type==='flash'){ p.r += dt*260; }
+    else if(p.type==='cone'){ /* static flash, no movement */ }
+    else if(p.type==='catnip'){ p.x += p.vx*dt; p.y += p.vy*dt; p.vx *= (1-3*dt); p.vy *= (1-3*dt); }
+    else { p.x += p.vx*dt; p.y += p.vy*dt; }
+    if(p.life<=0) particles.splice(i,1);
+  }
+
+  if(shakeT>0) shakeT -= dt;
+  updateHud();
+}
+
+function updateHud(){
+  document.getElementById('hpfill').style.width = Math.max(0,player.hp/player.maxHp*100)+'%';
+  document.getElementById('xpfill').style.width = Math.max(0,player.xp/player.xpToNext*100)+'%';
+  document.getElementById('lvl-label').textContent = 'Lv.'+player.level;
+  document.getElementById('fed-label').textContent = '🐟 '+fedCount;
+  const remain = Math.max(0, Math.ceil(DAY_LENGTH - dayElapsed));
+  document.getElementById('timer').textContent = 'Day '+dayNumber+' · 0:'+String(remain).padStart(2,'0');
+}
+
+/* ============== DRAW ============== */
+function drawBackground(){
+  ctx.save();
+  ctx.imageSmoothingEnabled = false;
+  const offX = (player.x*0.5)%FLOOR_TILE, offY = (player.y*0.5)%FLOOR_TILE;
+  ctx.translate(-offX,-offY);
+  ctx.fillStyle = floorPattern;
+  ctx.fillRect(0, 0, W+FLOOR_TILE*2, H+FLOOR_TILE*2);
+  ctx.restore();
+}
+
+function drawPlayer(){
+  ctx.save();
+  ctx.translate(player.x, player.y);
+  if(player.invuln>0 && Math.floor(player.invuln*20)%2===0) ctx.globalAlpha = 0.4;
+
+  // soft ground shadow
+  ctx.fillStyle='rgba(0,0,0,0.22)';
+  ctx.beginPath(); ctx.ellipse(0,20,15,5,0,0,Math.PI*2); ctx.fill();
+
+  // bouncy/poppy feel: squash-pop when hit, springy bob while running
+  let sx=1, sy=1, bobY=0;
+  if(player.hitBounce>0){
+    const b = player.hitBounce;
+    const squash = 1 + Math.sin(b*Math.PI)*0.4;
+    sx = squash; sy = 1/squash;
+  } else if(player.moving){
+    const bob = Math.sin((player.walkT||0)*16);
+    sx = 1 + bob*0.1;
+    sy = 1 - bob*0.1;
+    bobY = -Math.abs(bob)*5.5;
+  }
+  ctx.translate(0, bobY);
+  ctx.scale(sx, sy);
+
+  const dir = player.dir || 'down';
+  const frames = PLAYER_SPRITES[dir];
+  let src;
+  if(dir==='left' || dir==='right'){
+    src = frames[0];
+  } else if(player.moving){
+    const idx = Math.floor((player.walkT||0)*9) % frames.length;
+    src = frames[idx];
+  } else {
+    src = frames[0];
+  }
+  const img = playerImages[src];
+  if(img && img.complete && img.naturalWidth){
+    ctx.imageSmoothingEnabled = false;
+    const w = 46, h = 54;
+    ctx.drawImage(img, -w/2, -h*0.58, w, h);
+  }
+  ctx.restore();
+}
+
+const fishImg = new Image();
+fishImg.src = 'assets/fx/fish.png';
+const FISH_SPRITE_ANGLE_OFFSET = Math.PI/4; // sprite's nose points up-right by default
+
+function drawFish(){
+  for(const f of fish){
+    ctx.save();
+    ctx.translate(f.x,f.y);
+    ctx.rotate(Math.atan2(f.vy,f.vx) + FISH_SPRITE_ANGLE_OFFSET);
+    if(fishImg.complete && fishImg.naturalWidth){
+      ctx.imageSmoothingEnabled = false;
+      const s = 28;
+      ctx.drawImage(fishImg, -s/2, -s/2, s, s);
+    } else {
+      ctx.fillStyle='#cfe3ff'; ctx.strokeStyle='#2B2320'; ctx.lineWidth=1.6;
+      ctx.beginPath(); ctx.ellipse(0,0,7,3.6,0,0,Math.PI*2); ctx.fill(); ctx.stroke();
+    }
+    ctx.restore();
+  }
+}
+
+/* Draws a cat's shape centered at the current canvas origin, at "def.r=20"
+   reference scale. Reused for both live arena cats and static collection icons. */
+function drawCatShape(ctx, def){
+  ctx.strokeStyle='#1c1420'; ctx.lineWidth=2.4;
+  const spr = CAT_SPRITES[def.key];
+
+  function drawSprite(path, w, h, offX, offY){
+    const img = catImages[path];
+    if(!img || !img.complete || !img.naturalWidth) return;
+    ctx.save();
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(img, -w/2+(offX||0), -h/2+(offY||0), w, h);
+    ctx.restore();
+  }
+
+  switch(def.key){
+    case 'kitten':
+      drawSprite(spr, 46, 49, 0, -4);
+      break;
+    case 'shades':
+      drawSprite(spr, 46, 49, 0, -4);
+      ctx.fillStyle='#111'; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(-11,-25,22,7,2) : ctx.rect(-11,-25,22,7); ctx.fill();
+      break;
+    case 'astro':
+      drawSprite(spr, 46, 49, 0, -4);
+      ctx.strokeStyle='rgba(255,255,255,0.8)'; ctx.lineWidth=2;
+      ctx.fillStyle='rgba(200,230,255,0.25)';
+      ctx.beginPath(); ctx.arc(0,-14,22,0,Math.PI*2); ctx.fill(); ctx.stroke();
+      break;
+    case 'wizard':
+      drawSprite(spr, 46, 49, 0, -4);
+      ctx.fillStyle='#5a3a80';
+      ctx.beginPath(); ctx.moveTo(-13,-23); ctx.lineTo(13,-23); ctx.lineTo(2,-51); ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.fillStyle='#F2B84B';
+      ctx.beginPath(); ctx.arc(2,-51,2.4,0,Math.PI*2); ctx.fill();
+      break;
+    case 'roomba':
+      ctx.fillStyle='#555'; ctx.beginPath(); ctx.ellipse(0,20,20,7,0,0,Math.PI*2); ctx.fill(); ctx.stroke();
+      ctx.fillStyle='#F2B84B'; ctx.beginPath(); ctx.arc(-10,20,2,0,Math.PI*2); ctx.arc(10,20,2,0,Math.PI*2); ctx.fill();
+      drawSprite(spr, 42, 45, 0, -6);
+      break;
+    case 'hydra':
+      drawSprite(spr[0], 30, 32, -16, 0);
+      drawSprite(spr[1], 30, 32, 16, 0);
+      drawSprite(spr[2], 34, 36, 0, -12);
+      break;
+    case 'catzilla':
+      drawSprite(spr, 92, 98, 0, -10);
+      ctx.fillStyle='#F2B84B';
+      ctx.beginPath(); ctx.moveTo(-14,-46); ctx.lineTo(-8,-58); ctx.lineTo(0,-48); ctx.lineTo(8,-58); ctx.lineTo(14,-46); ctx.closePath(); ctx.fill(); ctx.stroke();
+      break;
+  }
+}
+
+function drawCat(c){
+  ctx.save();
+  ctx.translate(c.x,c.y);
+  const s = c.r/20;
+  ctx.scale(s,s);
+
+  // shadow
+  ctx.fillStyle='rgba(0,0,0,0.25)';
+  ctx.beginPath(); ctx.ellipse(0,22,14,4,0,0,Math.PI*2); ctx.fill();
+
+  if(c.dying){
+    const t = 1 - Math.max(0,c.dyingT)/0.32; // 0 -> 1
+    const pop = 1 + Math.sin(Math.min(1,t)*Math.PI)*0.75;
+    ctx.globalAlpha = Math.max(0, 1 - t*1.1);
+    ctx.scale(pop, pop);
+  } else if(c.hitBounce>0){
+    const b = c.hitBounce;
+    const squash = 1 + Math.sin(b*Math.PI)*0.34;
+    ctx.scale(squash, 1/squash);
+  }
+
+  drawCatShape(ctx, c.def);
+  ctx.restore();
+
+  // hp bar for boss / damaged cats
+  if(c.hp < c.maxHp && !c.dying){
+    const w = c.r*1.6;
+    ctx.fillStyle='rgba(0,0,0,0.4)'; ctx.fillRect(c.x-w/2, c.y-c.r-14, w, 5);
+    ctx.fillStyle = c.isBoss ? '#ff5a3c' : '#6B8F5A';
+    ctx.fillRect(c.x-w/2, c.y-c.r-14, w*Math.max(0,c.hp/c.maxHp), 5);
+  }
+}
+
+function drawOrbs(t){
+  for(const o of orbs){
+    if(o.phase===undefined) o.phase = Math.random()*Math.PI*2;
+    ctx.save();
+    ctx.translate(o.x,o.y);
+    const glow = 7 + Math.sin(t*3.6 + o.phase)*5;
+    ctx.shadowColor = 'rgba(242,184,75,0.95)';
+    ctx.shadowBlur = glow;
+    ctx.fillStyle='#F2B84B'; ctx.strokeStyle='#2B2320'; ctx.lineWidth=1.6;
+    ctx.beginPath();
+    for(let i=0;i<5;i++){
+      const a1 = -Math.PI/2 + i*(Math.PI*2/5), a2 = a1 + Math.PI/5;
+      ctx.lineTo(Math.cos(a1)*6, Math.sin(a1)*6);
+      ctx.lineTo(Math.cos(a2)*2.6, Math.sin(a2)*2.6);
+    }
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.restore();
+  }
+}
+
+function drawParticles(){
+  for(const p of particles){
+    ctx.save();
+    if(p.type==='heart'){
+      ctx.globalAlpha = Math.max(0,p.life/0.6);
+      ctx.fillStyle='#ff6b6b'; ctx.font='16px sans-serif';
+      ctx.fillText('❤', p.x-6, p.y);
+    } else if(p.type==='heart2'){
+      ctx.globalAlpha = Math.max(0,p.life/0.85);
+      const sz = p.sz||20;
+      ctx.font=sz+'px sans-serif';
+      ctx.fillStyle='#ff6b8a';
+      ctx.fillText('❤', p.x-sz*0.4, p.y);
+    } else if(p.type==='ring'){
+      ctx.globalAlpha = Math.max(0,p.life/0.45)*0.85;
+      ctx.strokeStyle='#ffd9e6'; ctx.lineWidth=4;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.stroke();
+    } else if(p.type==='flash'){
+      ctx.globalAlpha = Math.max(0,p.life/0.22)*0.9;
+      ctx.fillStyle='#fff6dc';
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
+    } else if(p.type==='cone'){
+      ctx.globalAlpha = Math.max(0,p.life/0.22)*0.4;
+      ctx.fillStyle='#a9d97a';
+      ctx.beginPath();
+      ctx.moveTo(p.x,p.y);
+      ctx.arc(p.x,p.y,p.range,p.angle-p.half,p.angle+p.half);
+      ctx.closePath(); ctx.fill();
+    } else if(p.type==='catnip'){
+      ctx.globalAlpha = Math.max(0,p.life/0.65);
+      ctx.fillStyle='#8fc75a';
+      ctx.beginPath(); ctx.arc(p.x,p.y,3.4,0,Math.PI*2); ctx.fill();
+    } else {
+      ctx.globalAlpha = Math.max(0,p.life/0.35);
+      ctx.fillStyle = p.color||'#fff';
+      ctx.beginPath(); ctx.arc(p.x,p.y,3,0,Math.PI*2); ctx.fill();
+    }
+    ctx.restore();
+  }
+}
+
+function drawGrassPatches(t){
+  for(const g of grassPatches){
+    ctx.save();
+    ctx.translate(g.x, g.y);
+
+    // ground-contact shadow, drawn before the sway transform so it stays
+    // put on the floor rather than leaning along with the blades
+    ctx.fillStyle='rgba(0,0,0,0.24)';
+    ctx.beginPath(); ctx.ellipse(0, 1, 12*g.scale, 4*g.scale, 0, 0, Math.PI*2); ctx.fill();
+
+    const wind = Math.sin(t*1.6 + g.phase)*1.6;
+    const bendMag = Math.hypot(g.sway.x, g.sway.y);
+    const skew = (g.sway.x + wind)/58;
+    const squish = 1 - Math.min(0.3, bendMag/130);
+    ctx.transform(1,0, skew,1, 0,0);
+    ctx.scale(g.scale, g.scale*squish);
+    if(grassImg.complete && grassImg.naturalWidth){
+      ctx.imageSmoothingEnabled = false;
+      const w=34,h=34;
+      // the sprite's blades run all the way to its bottom edge (no transparent
+      // padding there), so anchoring at -h puts the base exactly on the ground
+      ctx.drawImage(grassImg, -w/2, -h+2, w, h);
+    }
+    ctx.restore();
+  }
+}
+
+function render(){
+  ctx.save();
+  if(shakeT>0){
+    ctx.translate((Math.random()-0.5)*6*shakeT/0.15, (Math.random()-0.5)*6*shakeT/0.15);
+  }
+  drawBackground();
+  drawGrassPatches(elapsed);
+  drawOrbs(elapsed);
+  for(const c of cats) drawCat(c);
+  drawFish();
+  drawPlayer();
+  drawParticles();
+  ctx.restore();
+}
+
+/* ============== LOOP ============== */
+function loop(now){
+  if(state!=='playing'){ return; }
+  const dt = Math.min(0.033, (now-lastT)/1000);
+  lastT = now;
+  update(dt);
+  render();
+  requestAnimationFrame(loop);
+}
+
+/* ============== FLOW ============== */
+function startGame(){
+  resetGame();
+  document.getElementById('menu').style.display='none';
+  document.getElementById('gameover').style.display='none';
+  state='playing';
+  lastT = performance.now();
+  requestAnimationFrame(loop);
+}
+function endGame(){
+  state='gameover';
+  document.getElementById('go-time').textContent = 'Day '+dayNumber;
+  document.getElementById('go-fed').textContent = fedCount;
+  document.getElementById('go-lvl').textContent = player.level;
+  document.getElementById('gameover').style.display='flex';
+}
+function triggerDayTransition(){
+  state = 'daytransition';
+  cats = []; // the horde heads home for the night, hungrier for tomorrow
+  const survivedDay = dayNumber;
+  player.hp = Math.min(player.maxHp, player.hp + player.maxHp*0.25); // small mercy heal
+  document.getElementById('day-complete-num').textContent = survivedDay;
+  document.getElementById('day-next-num').textContent = survivedDay+1;
+  document.getElementById('dayOverlay').style.display = 'flex';
+  vibrate([20,50,20]);
+  setTimeout(()=>{
+    document.getElementById('dayOverlay').style.display = 'none';
+    dayNumber++;
+    dayElapsed = 0;
+    bossSpawnedThisDay = false;
+    spawnTimer = 0.6;
+    state = 'playing';
+    lastT = performance.now();
+    requestAnimationFrame(loop);
+  }, 2600);
+}
+document.getElementById('btn-start').addEventListener('click', startGame);
+document.getElementById('btn-retry').addEventListener('click', startGame);
+
+function vibrate(ms){ if(navigator.vibrate) navigator.vibrate(ms); }
+
+document.getElementById('pause-btn').addEventListener('click', ()=>{
+  if(state!=='playing') return;
+  state='paused';
+  pointerActive = false;
+  document.getElementById('pauseOverlay').style.display='flex';
+});
+document.getElementById('btn-resume').addEventListener('click', ()=>{
+  document.getElementById('pauseOverlay').style.display='none';
+  state='playing';
+  lastT = performance.now();
+  requestAnimationFrame(loop);
+});
+document.getElementById('btn-quit').addEventListener('click', ()=>{
+  document.getElementById('pauseOverlay').style.display='none';
+  state='menu';
+  renderCollection();
+  document.getElementById('menu').style.display='flex';
+});
+document.getElementById('btn-gohome').addEventListener('click', ()=>{
+  document.getElementById('gameover').style.display='none';
+  state='menu';
+  renderCollection();
+  document.getElementById('menu').style.display='flex';
+});
+document.addEventListener('visibilitychange', ()=>{
+  if(document.hidden && state==='playing'){
+    state='paused';
+    pointerActive = false;
+    document.getElementById('pauseOverlay').style.display='flex';
+  }
+});
+
+// idle render on menu
+player = {x:innerWidth/2,y:innerHeight/2,facing:0,invuln:0,dir:'down',walkT:0,moving:false,knock:{x:0,y:0},hitBounce:0};
+cats=[]; fish=[]; orbs=[]; particles=[];
+drawBackground(); drawPlayer();
+renderCollection();
+
+/* ============== LOADING SCREEN ============== */
+(function loadingScreen(){
+  const el = document.getElementById('loading-screen');
+  const bar = document.getElementById('loading-bar-fill');
+  const pctLabel = document.getElementById('loading-pct');
+  const images = [
+    ...Object.values(catImages),
+    ...Object.values(playerImages),
+    fishImg, grassImg,
+  ];
+  const total = images.length || 1;
+  let loaded = 0;
+  const startT = performance.now();
+  const MIN_MS = 3000; // linger on the loading screen longer
+  let finished = false;
+
+  function updateBar(){
+    const pct = Math.min(100, Math.round(loaded/total*100));
+    bar.style.width = pct+'%';
+    if(pctLabel) pctLabel.textContent = pct+'%';
+  }
+  function finishNow(){
+    if(finished) return;
+    finished = true;
+    el.classList.add('done');
+    setTimeout(()=>{ el.style.display='none'; }, 480);
+  }
+  function maybeFinish(){
+    const elapsed = performance.now()-startT;
+    setTimeout(finishNow, Math.max(0, MIN_MS-elapsed));
+  }
+  function onOne(){
+    loaded++;
+    updateBar();
+    if(loaded>=total) maybeFinish();
+  }
+  images.forEach(img=>{
+    if(img.complete && img.naturalWidth){ onOne(); }
+    else {
+      img.addEventListener('load', onOne, {once:true});
+      img.addEventListener('error', onOne, {once:true});
+    }
+  });
+  updateBar();
+  setTimeout(()=>{ if(!finished){ loaded = total; updateBar(); finishNow(); } }, 6000); // safety net
+})();
+
+})();
+</script>
+</body>
+</html>
